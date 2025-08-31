@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
-from src.cle.models.simulators import FlopsSimulatorRequest, FlopsSimulatorResponse
-from src.cle.simulators.flops import ProductivitySimulator
+from cle.models.simulators import FlopsSimulatorRequest, FlopsSimulatorResponse
+from cle.simulators.flops import ProductivitySimulator
 
 router = APIRouter()
 

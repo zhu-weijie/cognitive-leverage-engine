@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from src.cle.api.endpoints import health, simulators
+from cle.api.endpoints import health, simulators
 
 app = FastAPI(
     title="Cognitive Leverage Engine",
