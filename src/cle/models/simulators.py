@@ -5,13 +5,13 @@ class FlopsSimulatorRequest(BaseModel):
     task_description: str = Field(
         ...,
         description="A description of the knowledge worker task to be simulated.",
-        example="Summarize 10 financial reports",
+        json_schema_extra={"example": "Summarize 10 financial reports"},
     )
     allocated_flops: float = Field(
         ...,
-        gt=0,
+        ge=0,
         description="The amount of computational power (in TFLOPs) allocated to the task.",
-        example=100.0,
+        json_schema_extra={"example": 100.0},
     )
 
 
@@ -20,10 +20,10 @@ class FlopsSimulatorResponse(BaseModel):
     productivity_multiplier: float = Field(
         ...,
         description="The calculated productivity gain factor.",
-        example=1.0,
+        json_schema_extra={"example": 5.7},
     )
     equivalent_human_hours_saved: float = Field(
         ...,
         description="The estimated number of human hours saved by using AI leverage.",
-        example=0.0,
+        json_schema_extra={"example": 32.98},
     )
